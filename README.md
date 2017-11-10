@@ -23,11 +23,10 @@ Now in the `gdb` prompt you can run the following commands to step through your 
 Reading symbols from helloworld...(no debugging symbols found)...done. 
 >>> break _start
 Breakpoint 1 at 0x8048080
->>> run                                                                                                   
+>>> run 
 Starting program: /home/brian/Projects/EZ_ASM/helloworld
 Breakpoint 1, 0x08048080 in _start ()
 >>> si
 0x08048085 in _start ()
 >>>[enter]
 ```
-
