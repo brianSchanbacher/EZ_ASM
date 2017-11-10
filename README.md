@@ -10,6 +10,24 @@ This repo contains a set of scripts and templates that act as a wrapper around `
 * [ld](https://en.wikipedia.org/wiki/GNU_linker) (included with most Linux distros.)
 
 ## Reccomended Workflow
-WIP - But basically use GDB and [this](https://github.com/cyrus-and/gdb-dashboard)
+The workflow really is the most important thing about this whole setup, and is what makes it possible to not use the online x86 emulator.
 
+### What I Use
+[tmux](https://github.com/tmux/tmux/wiki) + [gdb](https://www.gnu.org/software/gdb/) + [gdb-dashboard](https://github.com/cyrus-and/gdb-dashboard#gdb-dashboard)  
+
+Once you have assembeled your instructions, and you want to see what they do...  
+Open two tmux panes side by side with `gdb` and `gdb-dashbard`. [You can follow these instructions for help](https://github.com/cyrus-and/gdb-dashboard#display-the-whole-dashboard-in-another-terminal)  
+Now in the `gdb` prompt you can run the following commands to step through your assembly instructions:  
+```
+# gdb -q helloworld  
+Reading symbols from helloworld...(no debugging symbols found)...done.                                                                                                           
+>>> break _start
+Breakpoint 1 at 0x8048080
+>>> run                                                                                                   
+Starting program: /home/brian/Projects/EZ_ASM/helloworld
+Breakpoint 1, 0x08048080 in _start ()
+>>> si
+0x08048085 in _start ()
+>>>[enter]
+```
 
