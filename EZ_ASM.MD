@@ -6,7 +6,7 @@ This repo contains a set of scripts and templates that act as a wrapper around `
 64-bit x86: `./assemble64 yourfile.asm`
 
 ## Dependencies: 
-* [nasm](http://www.nasm.us/)
+* [nasm](http://www.nasm.us/)  
 * [ld](https://en.wikipedia.org/wiki/GNU_linker) (included with most Linux distros.)
 
 ## Reccomended Workflow
