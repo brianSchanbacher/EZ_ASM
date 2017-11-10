@@ -20,7 +20,7 @@ Open two tmux panes side by side with `gdb` and `gdb-dashbard`. [You can follow 
 Now in the `gdb` prompt you can run the following commands to step through your assembly instructions:  
 ```
 # gdb -q helloworld  
-Reading symbols from helloworld...(no debugging symbols found)...done.                                                                                                           
+Reading symbols from helloworld...(no debugging symbols found)...done. 
 >>> break _start
 Breakpoint 1 at 0x8048080
 >>> run                                                                                                   
