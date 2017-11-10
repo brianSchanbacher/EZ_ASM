@@ -1,0 +1,6 @@
+#!/bin/bash
+
+FILE=$1
+BASENAME=$(basename $1 .asm)
+nasm -felf64 $FILE
+ld $BASENAME.o -o $BASENAME

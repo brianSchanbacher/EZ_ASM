@@ -1,0 +1,6 @@
+#!/bin/bash
+
+FILE=$1
+BASENAME=$(basename $1 .asm)
+nasm -felf32 $FILE
+ld -m elf_i386 $BASENAME.o -o $BASENAME
